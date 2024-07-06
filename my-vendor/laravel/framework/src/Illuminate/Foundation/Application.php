@@ -27,5 +27,8 @@ class Application extends Container
             default => dirname(array_keys(ClassLoader::getRegisteredLoaders())[0]),
         };
     }
-   
+
+    public function handleRequest(Request $request)
+    {
+    }
 }

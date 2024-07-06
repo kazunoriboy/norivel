@@ -3,7 +3,9 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "databse/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "Illuminate\\": "my-vendor/laravel/framework/src/Illuminate/",
+            "Symfony\\Component\\HttpFoundation\\": "my-vendor/symfony/http-foundation"
         }
     }
 }
