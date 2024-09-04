@@ -3,6 +3,7 @@
 namespace Illuminate\Foundation;
 
 use Illuminate\Container\Container;
+use Illuminate\Http\Request;
 
 class Application extends Container
 {

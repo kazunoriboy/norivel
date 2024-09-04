@@ -15,7 +15,6 @@ class HeaderBag implements \IteratorAggregate, \Countable, \Stringable
         foreach ($headers as $key => $values) {
             $this->set($key, $values);
         }
-
     }
 
     public function __toString(): string
@@ -42,6 +41,36 @@ class HeaderBag implements \IteratorAggregate, \Countable, \Stringable
         if (null !== $key) {
             return $this->headers[strtr($key, self::UPPER, self::LOWER)] ?? [];
         }
+
+        return $this->headers;
+    }
+
+    public function replace(array $headers = []): void
+    {
+        $this->headers = [];
+        $this->add($headers);
+    }
+
+    public function add(array $headers): void
+    {
+        foreach ($headers as $key => $value) {
+            $this->set($key, $value);
+        }
+    }
+
+    public function get(string $key, ?string $default = null): ?string
+    {
+        $headers = $this->all($key);
+
+        if (!$headers) {
+            return $default;
+        }
+
+        if (null === $headers[0]) {
+            return null;
+        }
+
+        return (string) $headers[0];
     }
 
     public function set(string $key, string|array|null $values, bool $replace = true): void

@@ -2,7 +2,7 @@
 
 namespace Symfony\Component\HttpFoundation;
 
-class ServerBag
+class ServerBag extends ParameterBag
 {
     public function getHeaders(): array
     {
