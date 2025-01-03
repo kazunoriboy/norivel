@@ -12,10 +12,10 @@ class ApplicationBuilder
 
     public function withKernel()
     {
-        // $this->app->singleton(
-            // \Illuminate\Contracts\Http\Kernel::class,
-            // \Illuminate\Foundation\Http\Kernel::class,
-        // );
+        $this->app->singleton(
+            \Illuminate\Contracts\Http\Kernel::class,
+            \Illuminate\Foundation\Http\Kernel::class,
+        );
 
         // $this->app->singleton(
             // \Illuminate\Contracts\Console\Kernel::class,
