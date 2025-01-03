@@ -1,0 +1,9 @@
+{
+  "name": "symfony/http-foundation",
+  "type": "library,"
+  "autoload" {
+    "psr-4": {
+      "Symfony\\Component\\HttpFoundation\\": ""
+    }
+  }
+}
